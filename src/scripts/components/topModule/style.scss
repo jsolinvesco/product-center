@@ -9,7 +9,17 @@
   h2 {
     color: $dark-blue;
     line-height: 1.1;
-    padding-top: rem-calc(10);
+    padding-top: rem-calc(2);
+
+    &:after {
+      border-bottom: rem-calc(3) solid $dark-blue;
+      content: '';
+      display: block;
+      margin-left: rem-calc(1);
+      padding-bottom: rem-calc(2);
+      transform-origin: 0% 50%;
+      width: rem-calc(45);
+    }
   }
 }
 

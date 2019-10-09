@@ -99,8 +99,10 @@ header {
   }
 
   .main-title {
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     display: flex;
+    flex-direction: column;
     min-height: rem-calc(200);
   }
 

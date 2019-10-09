@@ -4,6 +4,8 @@ import axios from 'axios';
 import { inject, observer } from 'mobx-react';
 import { Link } from '@reach/router';
 
+// import { productTypeName } from './helper/constant';
+
 import Footer from './footer';
 import Header from './header';
 import GlobalNav from './globalNav';
@@ -20,7 +22,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      loadedData: false
+      loadedData: false,
+      selectedType: ''
     };
   }
 
@@ -57,8 +60,21 @@ class App extends Component {
     });
   }
 
+  updateProductType = type => {
+    console.log(`param: ${type}`);
+
+    this.setState(
+      {
+        selectedType: type
+      },
+      () => {
+        console.log(`state: ${this.state.selectedType}`);
+      }
+    );
+  };
+
   render() {
-    const { loadedData } = this.state,
+    const { loadedData, selectedType } = this.state,
       dataContent = loadedData ? (
         <div className="main-container">
           <TopMoldule product="Mutual Funds" />
@@ -71,7 +87,11 @@ class App extends Component {
     return (
       <div>
         <GlobalNav region="US" channel="Financial Professional" />
-        <Header name="Products" />
+        <Header
+          name="Products"
+          selectedType={selectedType}
+          updateProductType={this.updateProductType}
+        />
         {dataContent}
         <Footer>
           <Link to="./">Prospectus</Link>
