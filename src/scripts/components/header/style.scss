@@ -1,0 +1,124 @@
+header {
+  background-color: rgba($dark-blue, 0.45);
+
+  .grid-container {
+    position: relative;
+  }
+
+  nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: rem-calc(10 0 30);
+    width: 100%;
+  }
+
+  .icon-invesco-logo {
+    color: $white;
+    font: 0/0 a;
+    height: rem-calc(47);
+    padding-right: rem-calc(30);
+    position: relative;
+    // width: rem-calc(72);
+    width: rem-calc(75);
+
+    &:before {
+      font-size: rem-calc(47);
+      width: rem-calc(57);
+    }
+  }
+
+  ul {
+    @extend %no-style;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    padding-top: rem-calc(36); //rem-calc(38);
+
+    li {
+      color: $white;
+      font-size: rem-calc(14);
+      font-weight: 600;
+      letter-spacing: 0.75pt;
+      padding: rem-calc(5 15);
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: $blue-gray;
+        // text-decoration: underline;
+      }
+
+      &:last-child {
+        margin-left: auto;
+        padding: rem-calc(0 0 5 30);
+        width: 28%;
+      }
+    }
+
+    .search {
+      input[type='text'] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($white, 0.75);
+        border-radius: 0;
+        color: $white;
+        font-size: rem-calc(16);
+        line-height: rem-calc(24);
+        outline: none;
+        padding: rem-calc(5 40 4 2);
+        width: 100%;
+      }
+
+      button {
+        color: $white;
+        font: 0/0 a;
+        margin-left: rem-calc(-26);
+        outline: none;
+        transition: color 0.15s ease-in-out;
+
+        &:before {
+          font-size: rem-calc(22);
+        }
+
+        &:hover {
+          color: $blue-gray;
+        }
+
+        &:active {
+          color: rgba($blue-gray, 0.75);
+          transition: color 0s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .main-title {
+    align-items: center;
+    display: flex;
+    min-height: rem-calc(200);
+  }
+
+  h1 {
+    color: $white;
+    font-family: $interstate;
+    font-size: rem-calc(52);
+    font-weight: 400;
+    letter-spacing: -1.25pt;
+    line-height: rem-calc(56);
+    margin-bottom: 0;
+  }
+
+  a {
+    &:hover,
+    &:visited,
+    &:active {
+      text-decoration: none;
+    }
+  }
+}

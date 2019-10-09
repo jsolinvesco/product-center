@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="26px" height="26px" viewBox="0 0 26 26" style="enable-background:new 0 0 26 26;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{clip-path:url(#SVGID_4_);enable-background:new    ;}
+	.st2{clip-path:url(#SVGID_6_);}
+	.st3{clip-path:url(#SVGID_8_);fill:none;stroke:#001A7A;stroke-width:2;stroke-miterlimit:10;}
+	.st4{clip-path:url(#SVGID_10_);fill:none;stroke:#001A7A;stroke-miterlimit:10;}
+</style>
+<g>
+	<defs>
+		<polygon id="SVGID_1_" points="533,554 556,554 556,574 552.4,577.7 548.1,582.1 533,582 		"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		<defs>
+			<rect id="SVGID_3_" x="-598" y="-792" width="1248" height="1642"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st1">
+			<g>
+				<defs>
+					<rect id="SVGID_5_" x="523" y="544" width="43" height="49"/>
+				</defs>
+				<clipPath id="SVGID_6_">
+					<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+				</clipPath>
+				<g class="st2">
+					<defs>
+						<rect id="SVGID_7_" x="533" y="554" width="23" height="29"/>
+					</defs>
+					<clipPath id="SVGID_8_">
+						<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+					</clipPath>
+					<polygon class="st3" points="533,554 556,554 556,574 552.4,577.7 548.1,582.1 533,582 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<defs>
+		<rect id="SVGID_9_" x="-598" y="-792" width="1248" height="1642"/>
+	</defs>
+	<clipPath id="SVGID_10_">
+		<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+	</clipPath>
+	<polyline class="st4" points="547.5,581.4 547.5,573.6 555.6,573.6 	"/>
+	<line class="st4" x1="548" y1="581.5" x2="555.6" y2="573.6"/>
+</g>
+<path d="M2.2,0v26h15.4l6.3-6.3V0H2.2z M17.8,24.3V20h4.3L17.8,24.3z M22.8,19h-6v6H3.2V1h19.7V19z"/>
+</svg>

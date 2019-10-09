@@ -1,0 +1,21 @@
+#main-content {
+  position: relative;
+  z-index: 2;
+}
+
+.main-container {
+  background-color: $white;
+  padding: rem-calc(50 0);
+}
+
+.main-bg {
+  // background: url(/images/hero-image.jpg) top center no-repeat;
+  background: url(/images/hero-image.jpg) center -20px no-repeat;
+  background-size: 100% auto;
+  display: block;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}

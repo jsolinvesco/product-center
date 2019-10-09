@@ -1,0 +1,75 @@
+.flex-container {
+  display: flex;
+}
+
+.section-title {
+  flex-basis: 40%;
+  padding: rem-calc(0 100 40 0);
+
+  h2 {
+    color: $dark-blue;
+    line-height: 1.1;
+    padding-top: rem-calc(10);
+  }
+}
+
+.section-summary {
+  flex-basis: 60%;
+  padding: rem-calc(0 30 40 0);
+
+  p {
+    font-size: rem-calc(20);
+    font-weight: 300;
+  }
+}
+
+.eyebrow {
+  display: block;
+  font-size: rem-calc(14);
+
+  &:hover,
+  &:active,
+  &:visited {
+    color: $black;
+    text-decoration: none;
+  }
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(16);
+  }
+
+  &:after {
+    border-width: rem-calc(0 2 2 0);
+    margin: rem-calc(0 0 3 6);
+    padding: rem-calc(3);
+  }
+}
+.section-title {
+  .multi-option-button .contents {
+    padding: rem-calc(16 0);
+
+    & > span,
+    a,
+    button {
+      color: $black;
+      font-size: rem-calc(14);
+      font-weight: 300;
+    }
+
+    a,
+    button {
+      cursor: pointer;
+      outline: none;
+      padding: rem-calc(8 20);
+
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: $blue;
+      }
+    }
+  }
+}

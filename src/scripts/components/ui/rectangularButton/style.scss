@@ -1,0 +1,170 @@
+.rect-btn,
+.rect-btn:hover,
+.rect-btn:visited {
+  background-color: $dark-blue;
+  color: $white;
+  display: inline-block;
+  font-size: rem-calc(12);
+  font-weight: 600;
+  letter-spacing: 0.25pt;
+  line-height: 1.2;
+  margin: rem-calc(20) auto;
+  min-width: rem-calc(150);
+  max-width: rem-calc(220);
+  padding: rem-calc(15 10);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.15s ease-in-out, opacity 0.25s ease-in-out;
+
+  &:focus {
+    // box-shadow: rem-calc(0 0 8) $blue;
+    box-shadow: none;
+    outline: none !important;
+  }
+
+  &.inactive {
+    // background-color: $gray;
+    // display: none !important;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  @include breakpoint(xxmedium up) {
+    font-size: rem-calc(14);
+    min-width: rem-calc(200);
+    max-width: rem-calc(260);
+    padding: rem-calc(18);
+  }
+}
+
+.rect-btn:hover {
+  background-color: $blue;
+}
+
+.rect-btn:active {
+  background-color: $navy;
+  box-shadow: none !important;
+}
+
+.rect-btn {
+  &.icon-download {
+    display: block;
+    padding: rem-calc(15 0 15 24);
+    position: relative;
+
+    &:before {
+      font-size: rem-calc(26);
+      height: rem-calc(26);
+      left: rem-calc(28);
+      margin-top: rem-calc(-14);
+      position: absolute;
+      top: 50%;
+      width: rem-calc(26);
+    }
+  }
+
+  &.blue {
+    background-color: $blue;
+
+    &:hover {
+      background-color: lighten($blue, 5);
+    }
+
+    &:active {
+      background-color: darken($blue, 5);
+    }
+  }
+
+  &.mint {
+    background-color: $mint;
+
+    &:hover {
+      background-color: lighten($mint, 5);
+    }
+
+    &:active {
+      background-color: darken($mint, 5);
+    }
+  }
+
+  &.white {
+    background-color: $white;
+    color: $black;
+
+    &:hover {
+      background-color: darken($white, 5);
+    }
+
+    &:active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &.gray {
+    background-color: $light-gray;
+    color: $black;
+
+    &:hover {
+      background-color: darken($light-gray, 5);
+    }
+
+    &:active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &.rounded-corners {
+    border-radius: rem-calc(4);
+  }
+
+  &.disabled {
+    background: $gray;
+    cursor: default;
+  }
+
+  &.small-btn {
+    margin: 0;
+    min-width: 0;
+    max-width: none;
+    padding: rem-calc(13 20 11);
+  }
+
+  &.icon-star {
+    padding-left: rem-calc(44);
+    position: relative;
+
+    &:before {
+      font-size: rem-calc(20);
+      left: rem-calc(17);
+      position: absolute;
+      top: rem-calc(9);
+    }
+  }
+
+  &.option-btn {
+    background-color: transparent;
+    border: 1px solid $gray2;
+    color: $black;
+    font-size: rem-calc(12);
+    letter-spacing: 1pt;
+    line-height: rem-calc(16);
+    margin: 0;
+    min-width: auto;
+    max-width: none;
+    padding: rem-calc(15 30 14);
+    transition: border-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+    &:hover {
+      border-color: $black;
+    }
+
+    &:active {
+      border-color: $medium-gray;
+      color: $dark-gray;
+      transition: border-color 0s ease-in-out, color 0s ease-in-out;
+    }
+  }
+}

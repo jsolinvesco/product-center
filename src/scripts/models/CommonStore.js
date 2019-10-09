@@ -1,0 +1,60 @@
+export default {
+  groupNames: [
+    'Municipal Fixed Income',
+    'Investment Grade',
+    'High Yield',
+    'Emerging Markets Debt'
+  ],
+  years: [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028],
+  productResultsProp: [
+    'allocation',
+    'yieldToMaturity',
+    'yieldToWorst',
+    'effectiveDuration',
+    'monthSecYield',
+    'distributionRate',
+    'numberOfHoldings'
+  ],
+  creditQualityKeys: [
+    'aaa',
+    'aa',
+    'a',
+    'bbb',
+    'bb',
+    'b',
+    'ccc',
+    'cc',
+    'c',
+    'd',
+    'nr'
+  ],
+  totalExpenseRatio: {
+    JSOL: 0.1,
+    DMOL: 0.1,
+    DWAN: 0.1,
+    MSOK: 0.1,
+    LPIM: 0.1,
+    BSCJ: 0.1,
+    BSCK: 0.1,
+    BSCL: 0.1,
+    BSCM: 0.1,
+    BSCN: 0.1,
+    BSCO: 0.1,
+    BSCP: 0.1,
+    BSCQ: 0.1,
+    BSCR: 0.1,
+    BSCS: 0.1,
+    BSJJ: 0.42,
+    BSJK: 0.42,
+    BSJL: 0.42,
+    BSJM: 0.42,
+    BSJN: 0.42,
+    BSJO: 0.42,
+    BSJP: 0.42,
+    BSJQ: 0.42,
+    BSAE: 0.29,
+    BSBE: 0.29,
+    BSCE: 0.29,
+    BSDE: 0.29
+  }
+};

@@ -1,0 +1,48 @@
+#global-nav {
+  background-color: $white;
+  position: relative;
+
+  ul.flex-grid {
+    align-items: center;
+    height: rem-calc(40);
+    padding: rem-calc(10 0 8);
+
+    .al {
+      margin-right: auto;
+    }
+
+    & > li {
+      border-left: 1px solid $gray;
+      font-size: rem-calc(14);
+      font-weight: 400;
+      line-height: 1.4;
+      padding: rem-calc(0 15);
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:first-child,
+      &:nth-child(2) {
+        border-left: none;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .chevron-down:after {
+    border-width: rem-calc(0 1 1 0);
+    margin: rem-calc(0 0 4 6);
+    padding: rem-calc(2);
+  }
+
+  .chevron-down,
+  .chevron-down:hover,
+  .chevron-down:visited,
+  .chevron-down:active {
+    text-decoration: none;
+  }
+}
