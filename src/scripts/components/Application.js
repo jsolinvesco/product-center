@@ -61,24 +61,17 @@ class App extends Component {
   }
 
   updateProductType = type => {
-    console.log(`param: ${type}`);
-
-    this.setState(
-      {
-        selectedType: type
-      },
-      () => {
-        console.log(`state: ${this.state.selectedType}`);
-      }
-    );
+    this.setState({
+      selectedType: type
+    });
   };
 
   render() {
     const { loadedData, selectedType } = this.state,
       dataContent = loadedData ? (
         <div className="main-container">
-          <TopMoldule product="Mutual Funds" />
-          <ProductTable product="Mutual Funds" />
+          <TopMoldule product={selectedType || 'Mutual Funds'} />
+          <ProductTable product={selectedType || 'Mutual Funds'} />
         </div>
       ) : (
         <div className="main-container">Loading</div>

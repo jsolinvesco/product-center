@@ -103,10 +103,10 @@ class MultiOptionButton extends Component {
         ) : (
           <span
             className={`trigger-btn ${className}`}
-            // onClick={this.showContentToggle}
-            // onKeyUp={this.showContentToggle}
-            onFocus={this.showContent}
-            onMouseOver={this.showContent}
+            onClick={this.showContentToggle}
+            onKeyUp={this.showContentToggle}
+            // onFocus={this.showContent}
+            // onMouseOver={this.showContent}
             role="button"
             tabIndex="0"
           >

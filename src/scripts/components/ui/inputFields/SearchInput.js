@@ -2,65 +2,13 @@ import './style.scss';
 import React, { Component } from 'react';
 import SearchList from './SearchList';
 
-const tempSearchResult = [
-  {
-    ticker: 'AFRAT',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A863',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  },
-  {
-    ticker: 'AFRAU',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A864',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  },
-  {
-    ticker: 'AFRAV',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A865',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  },
-  {
-    ticker: 'AFRAW',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A866',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  },
-  {
-    ticker: 'AFRAX',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A867',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  },
-  {
-    ticker: 'AFRAY',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A868',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  },
-  {
-    ticker: 'AFRAZ',
-    name: 'Invesco Floating Rate Fund',
-    productId: '00141A869',
-    url:
-      'https://www.invesco.com/portal/site/us/financial-professional/mutual-funds/'
-  }
-];
-
 class SearchInput extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       isFocus: false,
-      placeHolder: `Find ${props.productName}`,
+      placeHolder: 'Search Funds',
       resultLoading: false,
       value: props.value
     };
@@ -79,14 +27,14 @@ class SearchInput extends Component {
   onBlur = () => {
     this.setState({
       isFocus: false,
-      placeHolder: `Find ${this.props.productName}`
+      placeHolder: 'Search Funds'
     });
   };
 
   onFocus = () => {
     this.setState({
       isFocus: true,
-      placeHolder: `Search ${this.props.productName} by Name, CUSIP, Ticker`
+      placeHolder: `Search ${this.props.selectedType} by Name, CUSIP, Ticker`
     });
   };
 
@@ -110,8 +58,7 @@ class SearchInput extends Component {
   };
 
   render() {
-    // const { className, productName } = this.props,
-    const { className } = this.props,
+    const { className, productList } = this.props,
       { isFocus, placeHolder, resultLoading, value } = this.state;
 
     return (
@@ -135,7 +82,7 @@ class SearchInput extends Component {
           </form>
           {isFocus ? (
             <div className="search-result">
-              <SearchList loading={resultLoading} results={tempSearchResult} />
+              <SearchList loading={resultLoading} results={productList} />
             </div>
           ) : null}
         </div>
