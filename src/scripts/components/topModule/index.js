@@ -32,7 +32,7 @@ class TopMoldule extends Component {
               <div className="type-class">{data.product.typeClass}</div>
               <h5>{data.product.name}</h5>
               <div className="inception-date">
-                {data.product.returnValues.inceptionDate}
+                Inception Date: {data.product.returnValues.inceptionDate}
               </div>
             </a>
             <button className="my-list" />
@@ -59,7 +59,9 @@ class TopMoldule extends Component {
             <h4>Product Spotlight</h4>
             <button onClick={this.spotlightOff}>Close</button>
           </div>
-          <ul className="list">{spotlightList}</ul>
+          <div className="scroller">
+            <ul className="list">{spotlightList}</ul>
+          </div>
         </div>
       </section>
     );

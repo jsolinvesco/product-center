@@ -4,7 +4,7 @@
 
 .section-title {
   flex-basis: 40%;
-  padding: rem-calc(0 100 40 0);
+  padding: rem-calc(0 100 20 0);
 
   h2 {
     color: $dark-blue;
@@ -25,7 +25,7 @@
 
 .section-summary {
   flex-basis: 60%;
-  padding: rem-calc(0 30 40 0);
+  padding: rem-calc(0 30 20 0);
 
   p {
     font-size: rem-calc(20);
@@ -72,7 +72,7 @@
   }
 
   .title,
-  .list {
+  .scroller {
     display: flex;
   }
 
@@ -103,7 +103,134 @@
     }
   }
 
+  .scroller {
+    flex: 1;
+    padding: rem-calc(10 0 50);
+    position: relative;
+    overflow: hidden;
+  }
+
   .list {
     @extend %no-style;
+    transform: translate3d(0px, 0, 0);
+    transition: transform 1s ease-in-out;
+    white-space: nowrap;
+    width: 100%;
+
+    li {
+      background-color: $light-gray;
+      display: inline-block;
+      height: rem-calc(190);
+      margin-right: 2%;
+      padding: rem-calc(30);
+      position: relative;
+      width: 32%;
+
+      // &:last-child {
+      //   margin-right: 0;
+      // }
+
+      a {
+        display: block;
+        height: 100%;
+        padding-left: rem-calc(150);
+        position: relative;
+      }
+
+      a,
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        h5 {
+          text-decoration: underline;
+        }
+      }
+
+      .icon-zipDrive {
+        background-color: $navy;
+        height: rem-calc(100);
+        left: 0;
+        padding: rem-calc(12);
+        position: absolute;
+        top: 0;
+        width: rem-calc(130);
+
+        &:before,
+        &:after {
+          background-color: $navy;
+          content: '';
+          height: rem-calc(30);
+          position: inherit;
+          top: rem-calc(100);
+        }
+
+        &:before {
+          left: 0;
+          width: rem-calc(100);
+        }
+
+        &:after {
+          right: rem-calc(15);
+          transform: skew(-45deg);
+          width: rem-calc(30);
+        }
+      }
+
+      .fund-type,
+      .ticker,
+      .type-class {
+        letter-spacing: 0.75pt;
+        text-transform: uppercase;
+      }
+
+      .fund-type,
+      .type-class {
+        color: $white;
+        font-size: rem-calc(14);
+        font-weight: 600;
+        line-height: 1.2;
+        white-space: normal;
+      }
+
+      .ticker {
+        color: $gray;
+        font-size: rem-calc(18);
+        position: inherit;
+        top: rem-calc(74);
+
+        &:after {
+          border-bottom: rem-calc(1) solid $gray;
+          content: '';
+          display: block;
+          margin-left: rem-calc(1);
+          padding-bottom: rem-calc(2);
+          transform-origin: 0% 50%;
+          width: rem-calc(20);
+        }
+      }
+
+      .type-class {
+        color: $dark-blue;
+      }
+
+      h5 {
+        font-size: rem-calc(16);
+        font-weight: 400;
+        line-height: 1.4;
+        margin-top: rem-calc(12);
+        white-space: normal;
+      }
+
+      .inception-date {
+        bottom: 0;
+        font-size: rem-calc(12);
+        font-weight: 300;
+        line-height: rem-calc(12);
+        left: rem-calc(150);
+        position: absolute;
+      }
+    }
   }
 }
